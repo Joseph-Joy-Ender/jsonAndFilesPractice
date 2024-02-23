@@ -1,11 +1,14 @@
+package fileAndJson;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Product {
+public class Product{
 
-    private int id;
-    private String productName;
-    private BigDecimal price;
-    private int quantity;
+    private final int id;
+    private final String productName;
+    private final BigDecimal price;
+    private final int quantity;
 
     public Product(int id, String productName, BigDecimal price, int quantity) {
         this.id = id;
@@ -18,41 +21,21 @@ public class Product {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getProductName() {
         return productName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
 
     public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
 
     public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
-    @Override
-    public String toString() {
-        return String.format("""
-                -----------------------------------------------------
-                id         productName       price         quantity
-                %s          %s               %s            %s
-                
-                """, id, productName, price, quantity);
-    }
+
 }
